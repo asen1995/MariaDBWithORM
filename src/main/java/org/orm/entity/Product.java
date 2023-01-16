@@ -11,8 +11,20 @@ public class Product {
 
     @Id
     private int productId;
-    @Column(name = "product_name")
+    @Column(name = "product_name_asen")
     private String productName;
+
+    @Column(name = "product_price")
+    private Double price;
+
+    @Column(name = "product_quantity")
+    private Integer quantity;
+
+    @Column(name = "product_description")
+    private String description;
+
+    @Column(name = "product_category")
+    private String category;
 
 
     public int getProductId() {
@@ -29,5 +41,37 @@ public class Product {
 
     public void setProductName(String productName) {
         this.productName = productName;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
