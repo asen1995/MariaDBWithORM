@@ -27,5 +27,7 @@
         <property name="hbm2ddl.auto">create</property>
 
         <mapping class="org.orm.entity.Product"/>
+        <mapping class="org.orm.entity.Client"/>
+        <mapping class="org.orm.entity.ShoppingCart"/>
     </session-factory>
 </hibernate-configuration>
