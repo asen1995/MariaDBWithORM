@@ -1,9 +1,6 @@
 package org.orm.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "product")
@@ -11,7 +8,7 @@ public class Product {
 
     @Id
     private int productId;
-    @Column(name = "product_name_asen")
+    @Column(name = "product_name_asen4")
     private String productName;
 
     @Column(name = "product_price")
@@ -26,6 +23,10 @@ public class Product {
     @Column(name = "product_category")
     private String category;
 
+
+    @ManyToOne
+    @JoinColumn(name = "shopping_cart_id", nullable = false)
+    private ShoppingCart shoppingCart;
 
     public int getProductId() {
         return productId;

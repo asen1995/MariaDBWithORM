@@ -1,6 +1,7 @@
 package org.orm.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "shopping_cart")
@@ -15,5 +16,10 @@ public class ShoppingCart {
 
     @OneToOne(mappedBy = "shoppingCart")
     private Client client;
+
+    @OneToMany(mappedBy = "shoppingCart")
+    private List<Product> products;
+
+
 
 }
