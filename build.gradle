@@ -28,6 +28,10 @@ dependencies {
 
     //hibernate-core
     implementation "org.hibernate:hibernate-core:5.4.32.Final"
+
+
+    compileOnly "org.projectlombok:lombok:$lombok"
+    annotationProcessor "org.projectlombok:lombok:$lombok"
 }
 
 test {
