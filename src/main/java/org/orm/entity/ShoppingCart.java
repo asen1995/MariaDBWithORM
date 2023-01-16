@@ -13,4 +13,7 @@ public class ShoppingCart {
     @Column(name = "max_weight_kg")
     private Integer maxWeightKg;
 
+    @OneToOne(mappedBy = "shoppingCart")
+    private Client client;
+
 }

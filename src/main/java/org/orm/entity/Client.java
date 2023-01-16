@@ -12,4 +12,8 @@ public class Client {
 
     @Column(name = "client_name")
     private String name;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "shopping_cart_id")
+    private ShoppingCart shoppingCart;
 }
